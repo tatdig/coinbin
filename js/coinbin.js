@@ -912,27 +912,28 @@ $(document).ready(function() {
         // network name     "ltc"           "litecoin"      "LTC"
         // network name     "doge"          "dogecoin"      "DOGE"
 
-		if(host=='chain.so_bitcoinmainnet'){
+
+
+		if(host=='tdcoincore_tdcoin'){
+			listUnspentTdcoinCore(redeem, "TDC");
+		} else if(host=='chain.so_bitcoinmainnet'){
 			listUnspentChainso(redeem, "BTC");
-        } else if(host=='chain.so_litecoin'){
+		} else if(host=='chain.so_litecoin'){
 			listUnspentChainso(redeem, "LTC");
 		} else if(host=='chain.so_dogecoin'){
 			listUnspentChainso(redeem, "DOGE");
-
 		} else if(host=='blockcypher_bitcoinmainnet'){
 			listUnspentBlockcypher(redeem, "btc");
-        } else if(host=='blockcypher_litecoin'){
+		} else if(host=='blockcypher_litecoin'){
 			listUnspentBlockcypher(redeem, "ltc");
 		} else if(host=='blockcypher_dogecoin'){
 			listUnspentBlockcypher(redeem, "doge");
-
 		} else if(host=='blockchair_bitcoinmainnet'){
 			listUnspentBlockchair(redeem, "bitcoin");
-        } else if(host=='blockchair_litecoin'){
+		} else if(host=='blockchair_litecoin'){
 			listUnspentBlockchair(redeem, "litecoin");
 		} else if(host=='blockchair_dogecoin'){
 			listUnspentBlockchair(redeem, "dogecoin");
-
 		} else if(host=='cryptoid.info_carboncoin'){
 			listUnspentCryptoidinfo_Carboncoin(redeem);
 		} else {
@@ -1178,7 +1179,6 @@ $(document).ready(function() {
 			}
 		});
 	}
-
 
 	/* retrieve unspent data from chainso */
 	function listUnspentChainso(redeem, network){
